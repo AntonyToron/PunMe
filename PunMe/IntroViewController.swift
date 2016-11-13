@@ -230,6 +230,13 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //add border to dashboard
+//        dashboard.layer.cornerRadius = 30.0
+//        dashboard.layer.borderColor = UIColor.black.cgColor
+//        dashboard.layer.borderWidth = 4
+//        dashboard.clipsToBounds = true
+//        view.layer.backgroundColor = UIColor.black.cgColor
+        
         
         
         if let newImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -322,7 +329,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             (substring, substringRange, _, _) in
             
             if (substring?.lowercased() == word.lowercased()) {
-                attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: substringRange)
+                attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 104/255, green: 205/255, blue: 252/255, alpha: 1.0), range: substringRange)
             }
         })
         // 4
