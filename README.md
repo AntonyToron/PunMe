@@ -10,7 +10,7 @@ The mobile application, built for iOS iPhone, iTouch and iPad in Swift 3, calls 
 
 ## Backend
 
-Our backend server is a RESTful API built in Java Spring and deployed to Amazon Web Services using Boxfuse. When an image is received, it calls [Microsoft's Computer Vision API](https://www.microsoft.com/cognitive-services/en-us/computer-vision-api) which returns a caption describing the contents of the image, among other information about the image. We then use [Google's Cloud Natural Language Processing API](https://cloud.google.com/natural-language/) to determine the most important word in the caption, which is the direct subject of the image in one word. We then use this word to search [punoftheday.com](punoftheday.com) for puns relating to the subject of the image.
+Our backend server is a RESTful API built in Java Spring and deployed to Amazon Web Services using Boxfuse. When an image is received, it calls [Microsoft's Computer Vision API](https://www.microsoft.com/cognitive-services/en-us/computer-vision-api) which returns a caption describing the contents of the image, among other information about the image. We then use [Google's Cloud Natural Language Processing API](https://cloud.google.com/natural-language/) for syntax analysis of the caption. After this, we perform a variety of custom checks to determine key subjects of the image input by the user, and consequently the direct subject. We then use this word to search [punoftheday.com](punoftheday.com) for puns relating to the subject of the image.
 
 ## Website
 
