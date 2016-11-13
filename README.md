@@ -6,7 +6,7 @@ The PunMe app allows a user to take a photo or upload a photo and receive back a
 
 ## Mobile Application
 
-The mobile application, built for iOS in Swift, calls an API on our backend by sending a photo in the form of a jpeg image. From there, it receives back a pun to be displayed the user.
+The mobile application, built for iOS iPhone, iTouch and iPad in Swift 3, calls our API using the Alamofire networking framework and sends a photo in the form of a jpeg image, which the user can either take directly or select from his/her camera roll. From there, the app receives a JSON with a pun and a key word which appears in the pun, which is then displayed to the user along with the image. 
 
 ## Backend
 
